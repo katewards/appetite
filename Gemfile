@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -43,3 +43,16 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# steers layout gem
+gem 'steer'
+
+# lets make forms easier
+gem 'simple_form'
+
+# lets add in geolocation
+gem 'geocoder'
+
+
+
+
