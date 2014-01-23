@@ -1,0 +1,43 @@
+
+
+<section id="info">
+
+			<header>
+		 		<h1><a href="#">Appetite</a></h1>
+				<h2>Pins For Places We Love</h2>
+		  	</header>
+
+		  	<form> 
+
+		  		<form action="<% root_path %>" method="get">
+		  			<input type="text" name="location">
+		  		</form>
+
+			<ul>
+
+				<% @pins.each do |pin| %>
+
+				<li data-lat="<%= pin.latitude %>" data-lng="<%= pin.longitude %>">
+
+		     		<h3><%= pin.name %></h3>
+		        	<p><%= pin.address %></p>
+
+		        <% if params[:location].present? %>
+		        	<p><%= pin.distance_to(params[:location]).round(1) %>km away</p>
+		        <% end %>
+
+		        	<p><%= pin.description %></p>
+
+		      	</li>
+
+		      	<% end %>
+		  	</ul>
+
+		</section>
+
+		<section id="map"></section>
+
+
+<%= link_to "Add a new pin", new_pin_path, class: "button" %>
+
+

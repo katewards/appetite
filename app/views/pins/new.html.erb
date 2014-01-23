@@ -1,0 +1,13 @@
+<h3>Add a new pin</h3>
+
+<%= simple_form_for @pin do |form| %>
+
+	<%= form.input :name %>
+	<%= form.input :description %>
+	<%= form.input :address %>
+
+	<%= form.button :submit %>
+
+	<% end %>
+
+<%= link_to "Add a new pin", new_pin_path %>
